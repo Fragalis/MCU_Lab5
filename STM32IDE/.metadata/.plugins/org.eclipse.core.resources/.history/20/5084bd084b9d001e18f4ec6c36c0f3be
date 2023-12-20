@@ -1,0 +1,19 @@
+/*
+ * global.h
+ *
+ *  Created on: Dec 18, 2023
+ *      Author: ACER
+ */
+
+#ifndef INC_GLOBAL_H_
+#define INC_GLOBAL_H_
+
+#include "main.h"
+
+ADC_HandleTypeDef hadc1;
+TIM_HandleTypeDef htim2;
+UART_HandleTypeDef huart2;
+
+
+
+#endif /* INC_GLOBAL_H_ */

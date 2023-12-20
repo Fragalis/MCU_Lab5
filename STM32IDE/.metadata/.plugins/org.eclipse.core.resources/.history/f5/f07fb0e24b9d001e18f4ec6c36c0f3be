@@ -1,0 +1,29 @@
+/*
+ * uart.c
+ *
+ *  Created on: Dec 6, 2023
+ *      Author: ACER
+ */
+
+#include "uart.h"
+
+uint8_t temp = 0;
+uint8_t buffer[MAX_BUFFER_SIZE];
+uint8_t index_buffer = 0;
+uint8_t buffer_flag = 0;
+uint8_t valid_flag = 0;
+
+uint8_t command_ok[] = "!OK#";
+uint8_t ok_flag = 0;
+uint8_t command_rst[] = "!RST#";
+uint8_t rst_flag = 0;
+uint8_t wait_flag = 0;
+uint8_t command_adc[] = "!ADC=";
+uint8_t newline[]= "\r\n";
+
+void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart){
+	if(huart->Instance == USART2){
+		HAL_UART_Receive_IT(&huart2, &temp, 1);
+		buffer_flag = 1;
+	}
+}

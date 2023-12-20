@@ -1,0 +1,34 @@
+/*
+ * global.h
+ *
+ *  Created on: Dec 18, 2023
+ *      Author: ACER
+ */
+
+#ifndef INC_GLOBAL_H_
+#define INC_GLOBAL_H_
+
+#include "main.h"
+
+#define MAX_BUFFER_SIZE  30
+
+extern ADC_HandleTypeDef hadc1;
+extern TIM_HandleTypeDef htim2;
+extern UART_HandleTypeDef huart2;
+
+extern uint32_t ADC_value = 0;
+uint8_t temp = 0;
+uint8_t buffer[MAX_BUFFER_SIZE];
+uint8_t index_buffer = 0;
+uint8_t buffer_flag = 0;
+uint8_t valid_flag = 0;
+
+#define command_ok[] = "!OK#";
+uint8_t ok_flag = 0;
+uint8_t command_rst[] = "!RST#";
+uint8_t rst_flag = 0;
+uint8_t wait_flag = 0;
+uint8_t command_adc[] = "!ADC=";
+uint8_t newline[]= "\r\n";
+
+#endif /* INC_GLOBAL_H_ */

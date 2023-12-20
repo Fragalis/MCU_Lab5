@@ -1,0 +1,12 @@
+/*
+ * global.c
+ *
+ *  Created on: Dec 18, 2023
+ *      Author: ACER
+ */
+
+#include "global.h"
+
+ADC_HandleTypeDef hadc1;
+TIM_HandleTypeDef htim2;
+UART_HandleTypeDef huart2;

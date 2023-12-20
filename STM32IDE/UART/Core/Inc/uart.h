@@ -1,0 +1,13 @@
+/*
+ * uart.h
+ *
+ *  Created on: Dec 6, 2023
+ *      Author: ACER
+ */
+
+#ifndef INC_UART_H_
+#define INC_UART_H_
+
+#include "main.h"
+
+#endif /* INC_UART_H_ */
